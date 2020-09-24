@@ -1,0 +1,17 @@
+<html>
+    <head>
+
+    </head>
+    <body>
+        <script>
+            var cadena="Esto es una prueba";
+            var pedir = prompt("Introduce la letra a buscar en '"+cadena+"'.");
+            pedir = pedir.trim();
+            if(cadena.indexOf(pedir)==-1){
+                document.write("El carácter '"+pedir+"' no es parte de la cadena.");
+            }else{
+                document.write("La primera posición del carácter '"+pedir+"' es "+cadena.indexOf(pedir)+".");
+            }
+        </script>
+    </body>
+</html>
