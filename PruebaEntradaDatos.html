@@ -1,0 +1,26 @@
+<html>
+<head>
+    <title>Formulario</title>
+</head>
+<body>
+    <script>
+        function validar(){
+            var numero, output, nombre, cursor;
+            cursor = document.getElementById("cursor").style.cursor;
+            numero = document.getElementById("numb").value;
+            if(isNaN(numero)){
+                output="Datos no válidos.";
+                nombre = nombre.trim();
+                cursor.moveTo(document.getElementById("numero").getBoundingClientRect)
+            }else{
+                output="Datos correctos."
+            }
+            alert(output);
+        }
+    </script>
+    <p id="cursor" style="cursor: move;">Introduzca sus datos</p>
+    <p>Nombre: <input type="text" name="nombre" size="40" required, id="nombre"></p>
+    <p>Número de teléfono: <input type="number" required, id="numb"></p></body>
+    <p><button type="button" onclick="validar()", id="boton">Validar</button></p>
+    <p id="mensaje"></p>
+</html>
