@@ -8,7 +8,7 @@
             var numero, output, nombre, cursor;
             cursor = document.getElementById("cursor").style.cursor;
             numero = document.getElementById("numb").value;
-            if(isNaN(numero)){
+            if(isNaN(numero) && numero!=charCode(130)){
                 output="Datos no válidos.";
                 nombre = nombre.trim();
                 cursor.moveTo(document.getElementById("numero").getBoundingClientRect)
