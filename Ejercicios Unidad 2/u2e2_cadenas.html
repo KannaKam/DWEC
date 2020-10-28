@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <script>
+        var nombre =prompt("Introduzca su nombre.");
+        var apellido = prompt("Introduzca su apellido/s");
+        var edad = prompt("Introduzca su edad");
+        if (isNaN(edad)){
+            alert("No ha introducido un número");
+            edad='';
+        }else{
+            parseInt(edad);
+        }
+        var anyoNacimiento = prompt("Introduzca su fecha de nacimiento");
+        if (isNaN(anyoNacimiento)){
+            alert("No ha introducido un número");
+            anyoNacimiento='';
+        }else{
+            parseInt(anyoNacimiento);
+        }
+        alert("Nombre: '"+nombre+" "+apellido+"'.");
+        alert("Nombre: "+nombre+"\nApellido: "+apellido);
+        alert("Suma: "+(edad+anyoNacimiento));
+        alert(nombre+apellido+(edad+anyoNacimiento));
+    </script>
+</head>
+
+<body>
+</body>
+
+</html>

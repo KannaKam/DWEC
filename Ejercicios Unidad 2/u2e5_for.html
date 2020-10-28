@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="UTF-8">
+    <script>
+        var numero=prompt("Introduzca un número");
+        if(isNaN(numero)){
+            alert("No ha introducido un número");
+        }else{
+            var factorial = 1;
+            for (let i = 1 ; i <= numero; i++) {
+                factorial=factorial*i;
+            }
+            alert("El factorial de "+numero+" es "+factorial);
+        }
+    </script>
+</head>
+<body>
+</body>
+</html>
