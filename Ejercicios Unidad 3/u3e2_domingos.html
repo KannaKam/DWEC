@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        
+        var dia=prompt("Introduce el día en que naciste");
+        var mes=prompt("Introduce el mes en el que naciste");
+        var domingo = 0;
+
+        for(var i = 2020; i<=2100; i++){
+            if (new Date(i, mes-1, dia).getDay()==6){
+                domingo+= 1;
+            }
+        }
+
+        alert(domingo);
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

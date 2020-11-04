@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script>
+        var horas = new Date();
+        horas.setHours(9);
+        horas.setMinutes(0);
+        horas.setSeconds(0);
+
+        for(var i = 0; i<25; i++){
+            document.write(horas.getHours()+":"+('0' + horas.getMinutes()).slice(-2)+":"+('0' + horas.getSeconds()).slice(-2)+"<br>");
+            horas.setMinutes(horas.getMinutes()+30);
+        }
+    </script>
+    <title>Horas</title>
+</head>
+<body>
+    
+</body>
+</html>

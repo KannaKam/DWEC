@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Palíndromo</title>
+    <script>
+        var palabraPrompt = prompt("Introduzca una palabra");
+        var palabraMostrar = palabraPrompt;
+
+        palabraPrompt=palabraPrompt.toLowerCase();
+        palabraPrompt=palabraPrompt.replace(/ /g, "");
+        var palabraAlReves=palabraPrompt.split("").reverse().join("").replace(/ /g, "");
+
+        if(palabraPrompt==palabraAlReves){
+            alert(palabraMostrar+" es un palíndromo.");
+        }else{
+            alert(palabraMostrar+" no es un palíndromo.");
+        }
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
