@@ -1,79 +1,79 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script>
-            var nombre  = prompt("Introduce mi nombre.");
-            nombre = nombre.toLowerCase();
-            var apellido = prompt("Introduce mi primer apellido.");
-            apellido = apellido.toLowerCase(); 
-        do{
-            if(nombre=="olga" && apellido!="garcia"){
-                while(apellido!="garcia"){
-                    alert("Has introducido mal el apellido.");
-                    apellido = prompt("Introduce mi primer apellido.");
-                    apellido = apellido.toLowerCase(); 
-                }
-            } else if (nombre!="olga" && apellido=="garcia"){
-                while(nombre!="olga"){
-                    alert("Te has equivocado en el nombre.");
-                    nombre  = prompt("Introduce mi nombre.");
-                    nombre = nombre.toLowerCase();
-                }
-            } else if (nombre!="olga" && apellido!="garcia"){
-                while(nombre!="olga" && apellido!="garcia"){
-                    alert("ERROR. Inténtelo de nuevo.")
-                    nombre  = prompt("Introduce mi nombre.");
-                    nombre = nombre.toLowerCase();
-                    apellido = prompt("Introduce mi primer apellido.");
-                    apellido = apellido.toLowerCase();
-            }
-            }
-        } while(nombre!="olga" && apellido!="garcia");
+        var nombre = prompt("Introduce mi nombre.");
+        nombre.trim();
+        nombre = nombre.toLowerCase();
+        var apellido = prompt("Introduce mi primer apellido.");
+        apellido.trim();
+        apellido = apellido.toLowerCase();
+        do {
+            if (nombre == "olga" && apellido != "garcia") {
+                alert("Has introducido mal el apellido.");
+                apellido = prompt("Introduce mi primer apellido.");
+                apellido = apellido.toLowerCase();
 
-        
-        
+            } else if (nombre != "olga" && apellido == "garcia") {
+                alert("Te has equivocado en el nombre.");
+                nombre = prompt("Introduce mi nombre.");
+                nombre = nombre.toLowerCase();
+
+            } else if (nombre != "olga" && apellido != "garcia") {
+                alert("ERROR. Inténtelo de nuevo.");
+                nombre = prompt("Introduce mi nombre.");
+                nombre = nombre.toLowerCase();
+                apellido = prompt("Introduce mi primer apellido.");
+                apellido = apellido.toLowerCase();
+            }
+        } while (nombre != "olga" || apellido != "garcia");
+
+
+
     </script>
     <style>
-        .fecha{
+        .fecha {
             float: right;
         }
     </style>
     <title>Prueba Javascript</title>
 </head>
+
 <body>
     <div class="fecha">
         <script>
-            var fechaHoy=new Date();
+            var fechaHoy = new Date();
             var dias = ["Lunes", "Martes", "Miércoles", "Jueves", "Viernes", "Sábado", "Domingo"];
             var meses = ["Enero", "Febrero", "Marzo", "Abril", "Mayo", "Junio", "Julio", "Agosto", "Septiembre", "Octubre",
-            "Noviembre", "Diciembre"];
-            var dia = dias[fechaHoy.getDay()-1];
+                "Noviembre", "Diciembre"];
+            var dia = dias[fechaHoy.getDay() - 1];
             var mes = meses[fechaHoy.getMonth()];
-            document.write(dia+" "+fechaHoy.getDate()+" de "+ mes +" de "+fechaHoy.getFullYear());
+            document.write(dia + " " + fechaHoy.getDate() + " de " + mes + " de " + fechaHoy.getFullYear());
         </script>
     </div>
     <div class="cadena">
         <script>
-            var palabraPrompt = prompt("Introduzca una palabra");
-            var palabraAlReves=palabraPrompt.split("").reverse().join("");
-            palabraAlReves=palabraAlReves.toLowerCase();
-            palabraAlReves=palabraAlReves.replace(/[0-9]/g, "");
+            var palabraPrompt = prompt("Introduzca una palabra o frase");
+            var palabraAlReves = palabraPrompt.split("").reverse().join("");
+            palabraAlReves = palabraAlReves.replace(/[0-9]/g, "");
             document.write(palabraAlReves);
         </script>
     </div>
     <div class="tabla">
         <script>
-            while(isNaN(p)){
-            var p = prompt("Introduce un número");
-            }
+            do{
+                var p = prompt("Introduce un número");
+            }while (isNaN(p));
             document.write("<table border 1px>");
-            document.write("<tr><th>Valor de x</th><th>y="+p+"x+5</th></tr>");
-            for(var x = -5; x <=5; x++){
-                document.write("<tr><td>" + x + "</td> <td>" + ((p*x) + 5) + "</td></tr>")
+            document.write("<tr><th>Valor de x</th><th>y=" + p + "x+5</th></tr>");
+            for (var x = -5; x <= 5; x++) {
+                document.write("<tr><td>" + x + "</td> <td>" + ((p * x) + 5) + "</td></tr>")
             }
         </script>
     </div>
 </body>
+
 </html>
