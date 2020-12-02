@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css">
+    <script src="arrays.js"></script>
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="container">
+        <script>
+            do {
+                var eleccion = parseInt(prompt("Introduce una opción:\n1. Mostrar el número de elementos del array" +
+                    "\n2. Mostrar todos los elementos del array." +
+                    "\n3. Muestra los elementos del array en sentido inverso.." +
+                    "\n4. Muestra los elementos del array ordenados alfabéticamente (pero no los ordena)" +
+                    "\n5. Añadir un elemento al principio del array." +
+                    "\n6. Añadir un elemento al final del array" +
+                    "\n7. Borrar un elemento al principio del array (y decir cuál se ha borrado)." +
+                    "\n8. Borrar un elemento al final del array (y decir cuál se ha borrado)." +
+                    "\n9. Muestra el elemento que se encuentra en una posición que el usuario indica." +
+                    "\n10. Muestra la posición en la que se encuentra un elemento que le indica el usuario." +
+                    "\n11. Muestra los elementos que se encuentran en un intervalo que el usuario indica."));
+            } while (eleccion < 1 || eleccion > 10);
+            switch (eleccion) {
+                case 1:
+                    document.write(mostrarNumeroPaises());
+                    break;
+                case 2:
+                    mostrarPaises();
+                    break;
+                case 3:
+                    mostrarInverso();
+                    break;
+                case 4:
+                    mostrarOrdenado();
+                    break;
+                case 5:
+                    anyadirPaisPrincipio();
+                    break;
+                case 6:
+                    anyadirPaisFinal();
+                    break;
+                    case 7:
+                    borrarPrincipio();
+                    break;
+                    case 8:
+                    borrarFinal();
+                    break;
+            }
+        </script>
+    </div>
+</body>
+
+</html>
