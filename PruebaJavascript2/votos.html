@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="votos.js"></script>
+    <script>
+        var votos = [
+            new Voto("Ataulfo Argenta", "PSOE", 0),
+        new Voto("José Saramago", "PSOE",0),
+        new Voto("Santa Catalina", "PSOE", 0),
+        new Voto("Riomar", "PSOE", 0),
+        new Voto("Ataulfo Argenta","PP", 0),
+        new Voto("José Saramago","PP",0),
+        new Voto("Santa Catalina", "PP", 0),
+        new Voto("Riomar", "PP", 0),
+        new Voto("Ataulfo Argenta","IU", 0),
+        new Voto("José Saramago","IU",0),
+        new Voto("Santa Catalina", "IU", 0),
+        new Voto("Riomar", "IU", 0),
+        new Voto("Ataulfo Argenta","Ciudadanos", 0),
+        new Voto("José Saramago","Ciudadanos",0),
+        new Voto("Santa Catalina", "Ciudadanos", 0),
+        new Voto("Riomar", "Ciudadanos", 0),
+        new Voto("Ataulfo Argenta","Podemos", 0),
+        new Voto("José Saramago","Podemos",0),
+        new Voto("Santa Catalina", "Podemos", 0),
+        new Voto("Riomar", "Podemos", 0),
+        new Voto("Ataulfo Argenta","UPYD", 0),
+        new Voto("José Saramago","UPYD",0),
+        new Voto("Santa Catalina", "UPYD", 0),
+        new Voto("Riomar", "UPYD", 0)
+        ]
+        var opcion = prompt("Introduzca una opción:\n"+
+        "1. Introducir votos\n"+
+        "2. Modificar votos\n"+
+        "3. Mostrar votos\n"+
+        "3. Mostrar total votos\n")
+        do{
+        switch(parseInt(opcion)){
+            case 1:
+            for (let i = 0; i < votos.length; i++) {
+            alert("Introduce los votos obtenidos por "+votos[i].partido+" en "+votos[i].colegio+".")
+            this.votos[i].numeroVotos=votos[i].introduceVotos();
+            }
+            break;
+            case 2:
+            for (let i = 0; i < votos.length; i++) {
+            if(votos[i].colegio == votos[i].cambiaDatos().colegio && votos[i].partido==votos[i].cambiaDatos().partido){
+                votos[i] = votos[i].cambiaDatos();
+            }
+            }
+            break;
+            case 3:
+                var voto;
+                var partido = prompt("Introduce el nombre del partido.");
+                partido.toLowerCase();
+            for (let i = 0; i < votos.length; i++) {
+                if(votos[i].partido = votos[i].contarVotos(partido)){
+                    voto += votos[i].numeroVotos;
+                }
+            }
+            alert(voto);
+             break;
+        }
+    }while(opcion<0 || opcion>4);
+         
+    </script>
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+</html>
