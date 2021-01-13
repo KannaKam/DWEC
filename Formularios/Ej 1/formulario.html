@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="../main.js"></script>
+</head>
+<body>
+    <fieldset>
+        <legend align="right">Formulario de discos</legend>
+    <form id="myForm" action="tramitar.php" method="post">
+        <br>
+        <label for="name">Nombre del disco:</label>
+        <input type="text" id="name" name="name" placeholder="Nombre del disco">
+        <br><br>
+        <label for="group">Grupo de música o cantante:</label>
+        <input type="text" id="group" name="group" placeholder="Grupo de música">
+        <br><br>
+        <label for="year">Año de Publicación:</label>
+        <input type="text" id="year" name="year" placeholder="Año de publicacion">
+        <br><br>
+        <label for="music">Tipo de musica:</label>
+        <select name="music" id="music">
+            <option value="" selected disabled>...</option>
+            <option value="rock">Rock</option>
+            <option value="pop">Pop</option>
+            <option value="punk">Punk</option>
+            <option value="indie">Indie</option>
+        </select>
+        <br><br>
+        <label for="location">Ubicación:</label>
+        <input type="text" id="location" name="location" placeholder="Ubicación del disco">
+        <br><br>
+        <label>Prestado: </label>
+        <label for="prestado">Si</label>
+        <input type="radio" id="prestado" name="lent" value="true">
+
+        <label for="noPrestado">No</label>
+        <input type="radio" id="noPrestado" name="lent" value="false" checked>
+        <br><br>
+        <input onclick="validar()" type="button" value="Submit">
+        &nbsp;
+        <input type="reset" value="Reset">
+    </form>
+</fieldset>
+</body>
+</html>
