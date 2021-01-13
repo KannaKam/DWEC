@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="producto.js"></script>
+    <script src="arrayvectores.js"></script>
+    <script>
+        var productos = [
+            new Producto("PC1SMR1", "PC", "AULA 1"),
+            new Producto("MON3DAW2", "MONITOR", "AULA 25"),
+            new Producto("PC2DAW1", "PC", "AULA 18")
+        ]
+        var productoNuevo = new Producto;
+        productoNuevo.crearProducto();
+        productos.push(productoNuevo);
+        document.write("<ol>")
+        for (let i = 0; i < productos.length; i++) {
+            document.write("<li>"+productos[i].numeroSerie+"  "+productos[i].tipo+"  "+productos[i].localizacion+"</li>");   
+        }
+        document.write("</ol>");
+        document.write("Hay un total de "+mostrarNumeroProductos(productos)+" productos.");
+        ordenarProductos(productos);
+    </script>
+    <title>Ejercicio 4</title>
+</head>
+<body>
+    
+</body>
+</html>

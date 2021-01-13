@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script>
+        function validar_cadena(cadena) {
+            if(cadena == null || cadena == ""){
+                alert("No has introducido una cadena.");
+            }else{
+                cadena.trim();
+            }
+        }
+        var opcion = parseInt(prompt("Introduzca una opción:"
+        +"\n1. Mostrar la fecha de hoy."
+        +"\n2. Sustituir caracteres en blanco por guiones y eliminar números."
+        +"\n3. Devolver texto entre paréntesis."));
+        switch(opcion){
+            case 1:
+            var fecha = new Date();
+            var meses = ["Enero", "Febrero", "Marzo", "Abril", "Mayo", "Junio", "Julio", "Agosto", "Septiembre", "Octubre", "Noviembre", "Diciembre"];
+            alert(fecha.getDate()+"/"+meses[fecha.getMonth()]+"/"+fecha.getFullYear());
+            break;
+            case 2:
+            var cadena = prompt("Introduzca una cadena");
+            validar_cadena(cadena);
+            var nuevaCadena = "";
+            for (let i = 0; i < cadena.length; i++) {
+                if(cadena[i].match("\\S")){
+                    nuevaCadena+=cadena[i];
+                }else{
+                    nuevaCadena+="-";
+                }
+            }
+            alert(nuevaCadena);
+            break;
+            case 3:
+            var cadena = prompt("Introduzca una cadena");
+            validar_cadena(cadena);
+            var nuevaCadena = "";
+            for (let i = 0; i < cadena.length; i++) {
+                if(cadena[i].match("\\S")){
+                    nuevaCadena+=cadena[i];
+                }else{
+                    nuevaCadena+="-";
+                }
+            }
+            alert(nuevaCadena);
+            break;
+        }
+    </script>
+    <title>Ejercicio 3</title>
+</head>
+<body>
+    
+</body>
+</html>

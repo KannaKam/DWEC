@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script>  
+        function validar() {
+            var num;
+            do{
+                num = prompt("Introduzca un número.");
+                var flag = false;
+                if(num[0].match("\\S")){
+                    flag = true;
+                }
+                if(isNaN(num) || num == "" || num < 0 || num > 100){
+                    alert("El número introducido es incorrecto.");
+                    flag = true;
+                }else{
+                    flag = false;
+                }
+         }while(flag);
+        }
+        validar();
+    </script>
+    <title>Ejercicio 1</title>
+</head>
+<body>
+    
+</body>
+</html>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script>  
+        var areaCirculo = prompt("Introduzca el área del círculo.");
+        var areaCuadrado = prompt("Introduzca el área del cuadrado.");
+        areaCirculo.trim();
+        areaCuadrado.trim();
+        areaCuadrado = parseInt(areaCuadrado);
+        areaCirculo = parseInt(areaCirculo);
+        var radio = Math.sqrt((areaCirculo/Math.PI));
+        var lado = Math.sqrt(areaCuadrado);
+        alert("El radio del círculo es: "+radio.toFixed(2)+".");
+        alert("El radio del cuadrado es: "+lado.toFixed(2)+".");
+        if(radio>lado || (radio*2)>lado){
+            alert("El círculo no cabe en el cuadrado.");
+        }else{
+            alert("El círculo cabe en el cuadrado.");
+        }
+    </script>
+    <title>Ejercicio 2</title>
+</head>
+<body>
+    
+</body>
+</html>
